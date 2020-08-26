@@ -1,0 +1,209 @@
+//main: ../style.less
+
+/*Service*/
+.services{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 686px;
+  
+}
+.services__inner{
+    position:relative;
+    z-index: 100;
+    top:-100px;
+    left:0;
+}
+.services__content{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.services__item{
+    flex-basis: 33%;
+    flex-grow: 1;
+    padding: 30px;
+
+}
+.services__skew__img{
+    width: 100%;
+    height: auto;
+    visibility: visible;
+}
+.services__skew{
+    display: block;
+    transform: skewY(0deg) skewX(0deg);
+    position: relative;
+    width: 100%;
+    max-width: 360px;
+    height: 100%;
+    max-height: 360px;
+    
+}
+.skew__content{
+    position: absolute;
+    padding: 36px 20px 20px;
+    z-index: 5;
+    left: 0;
+    top:0;
+    bottom:0;
+    right:0;
+    background-color:@color-white;
+    border:1px solid #e3e2e7;
+    text-align: center;
+    transition:background .2s linear;
+    &:hover{
+        background-color:rgba(@color-primary,0.8);
+        border-color:@color-primary;
+    }
+    &:hover .skew__icon{
+        background-color:@color-white;
+    }
+     &:hover .skew__icon svg path{
+        fill:@color-primary;
+    }
+    &:hover .skew__title{
+        color:@color-white;
+    }
+    &:hover .skew__text{
+        color:@color-white;
+    }
+}
+
+.skew{
+
+   
+    &__icon{
+        position: relative;
+        background-color:@color-primary;
+        width: 80px;
+        height: 80px;
+        margin: 0 auto 30px;
+        border-radius: 50%;
+        svg{
+            width:50px;
+            height: 50px;
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform: translate3d(-50%,-50%,0);
+            path{
+                transition:fill .3s linear;
+            }
+        }
+    }
+    &__title{
+        text-transform:uppercase;
+        .font(@color-brown,'Roboto',16px,700,normal,1);
+        margin-bottom: 30px;
+        letter-spacing: 2px;
+         transition:color .2s linear;
+    }
+    &__text{
+        .font(@color-brown,'OpenSans',14px,300,normal,1.28);
+        transition:color .2s linear;
+        height: 100px;
+        overflow: hidden;
+    }
+}
+/*Popular Service*/
+
+.popular__services{
+    text-align: center;
+}
+
+.price__list__services{
+    background-color:@color-white;
+    border:1px solid @color-primary;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    
+}
+.price__header, 
+.price__list__item{
+    display: flex;
+    justify-content:flex-start;
+    
+}
+
+.price__header{
+    background-color:@color-primary;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    padding:15px 0;
+    padding-left:45px;
+    h2{
+         .font(@color-white,'Roboto',30px,700,normal,1);
+        text-align: left;
+    
+        &:first-child{
+            flex-basis:66.66%;
+            max-width: 800px;
+        }
+        &:last-child{
+
+            flex-basis:33.33%;
+            max-width: 400px;
+        }
+    }
+}
+.price__list__item{
+    display: flex;
+    justify-content: flex-start;
+    .font(#4c4c4c,'Roboto',18px,400,normal,1);
+    
+        &:not(:last-child){
+            border-bottom: 1px solid @color-primary;
+
+        }
+        &:hover{
+            background-color: #df6808;
+            color:@color-white;
+            cursor:pointer;
+            transition:color .3s linear, background .3s linear;
+        }
+        &:hover span:first-child:before{
+            transition:background .3s linear;
+            background-image: url('../svg/tick_white.png');
+        }
+        &:hover span:last-child{
+            border-left: 1px solid @color-white;
+        }
+    span{
+     
+        text-align: left;
+        padding: 26px 45px;
+    
+        &:first-child{
+            padding-left: 75px;
+            flex-basis:66.66%;
+            max-width: 800px;
+            position: relative;
+            &:before{
+                content: "";
+                display: block;
+                background-image: url('../svg/tick_orange.png');
+                background-size: cover;
+                width: 29px;
+                height: 29px;
+                position: absolute;
+                left:25px;
+                top:50%;
+                transform: translateY(-50%);
+                z-index: 2;
+            }
+        }
+        &:last-child{
+            flex-basis:33.33%;
+            max-width: 400px;
+            border-left: 1px solid @color-primary;
+        }
+        
+        
+    }
+    
+    
+}
+
+
+

@@ -1,0 +1,37 @@
+//main: ../style.less
+.marketing{
+    position: relative;
+    background-color:@color-primary;
+    &:before{
+        position: absolute;
+        top:-286px;
+        display: block;
+        content: "";
+        background-image:url('../images/marketing__banner.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        
+        width:100%;
+        height: 286px;
+    }
+}
+
+.marketing__content{
+    display:flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding:45px 0 90px;
+    text-transform: uppercase;
+    
+}
+
+.marketing__suptitle{
+    .font(@color-white,'Roboto',18px,700,normal,1);
+    margin-bottom: 20px;
+}
+.marketing__subtitle{
+    .font(@color-white,'Roboto',36px,700,normal,1);
+    padding-bottom: 5px;
+   
+}

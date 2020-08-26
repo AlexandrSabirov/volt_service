@@ -1,0 +1,34 @@
+//main: ../style.less
+.about{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap:wrap;
+}
+.about__item{
+    flex-basis: 50%;
+    &:first-child{
+        padding-right: 100px;
+    }
+    &:last-child{
+        text-align: right;
+    }
+}
+.about__title{
+    .font(@color-black,'OpenSans',36px,700,normal,1);
+    text-transform:uppercase;
+    margin-bottom: 30px;
+}
+.about__content{
+    .font(@color-black,'Roboto',16px,400,normal,1.5);
+    p + p{
+        margin-top:5px;
+    }
+    span {
+        color:@color-primary;
+    }
+}
+.about__img{
+    width: 100%;
+    max-width: 560px;
+    height: auto;
+}

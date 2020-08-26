@@ -1,0 +1,32 @@
+//main: ../style.less
+
+.telephone{
+     .font(@color-white,'Roboto',16px,300,normal,1);
+    
+    &--top__panel{
+        display: flex;
+        align-items: center;
+    }
+    &--header{
+        color:@color-black;
+    }
+    
+}
+
+.telephone__item{
+    display: flex;
+    align-items: center;
+    &+.telephone__item{
+        margin-left: 24px;
+    }
+}
+    
+.callback{
+    color:@color-primary; 
+    font-weight: 600; 
+    transition:color .2s linear;
+    &:hover{
+        color:@color-black;
+    }
+}
+    

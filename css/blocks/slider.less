@@ -1,0 +1,40 @@
+//main: ../style.less
+.sl{
+  
+}
+.slider__item{
+    width: 100%;
+    height: auto;
+    max-height: 600px;
+    overflow: hidden;
+    position: relative;
+    background-color:#1f1f1f;
+    
+}
+.slider__img{
+    display: block;
+    position: relative;
+    opacity: 0.45;
+    width: 100%;
+    min-width: 100vw;
+    height: 100%;
+  
+}
+.slider__content{
+    width: 100%;
+    position: absolute;
+    top:145px;
+    left:50%;
+    z-index: 1;
+    transform: translateX(-50%);
+    text-align: center;
+}
+.slider__title{
+    .font(@color-white,'Roboto',70px,700,normal,1.48);
+    margin-bottom: 10px;
+}
+.slider__subtitle{
+    .font(@color-white,'Roboto',18px,700,normal,1);
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}

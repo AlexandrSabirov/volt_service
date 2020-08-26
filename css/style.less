@@ -1,0 +1,57 @@
+// compress:true;
+@import "vars";
+@import "fonts";
+@import "mixin";
+
+html{
+    font-size:14px;
+}
+
+body{
+    margin:0;
+    padding:0;
+    font-family: 'Roboto';
+    font-style: normal;
+    line-height: 1;
+}
+.page{
+    overflow: hidden;
+}
+p,h1,h2,h3,h4,h5,h6{
+    padding:0;
+    margin:0;
+}
+*,
+*:before,
+*:after{
+    box-sizing: border-box;
+    -webkit-box-sizeng:border-box;
+}
+a{
+    text-decoration: none;
+}
+a:focus{
+    outline:none;
+}
+a:-moz-focus-inner{
+    border:0;
+}
+.container{
+    width:100%;
+    max-width:1230px;
+    padding:0 15px;
+    margin: 0 auto;
+}
+@import "blocks/icon";
+@import "blocks/telephone";
+@import "blocks/social";
+@import "blocks/header";
+@import "blocks/logo";
+@import "blocks/btn";
+@import "blocks/nav";
+@import "blocks/slider";
+@import "blocks/services";
+@import "blocks/section";
+@import "blocks/marketing";
+@import "blocks/about";
+@import "blocks/work";

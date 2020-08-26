@@ -1,0 +1,52 @@
+//main: ../style.less
+
+.header{
+    width:100%;
+    margin: 0 auto;
+    position: relative;
+    
+    &--top__panel{
+        width: 100%;
+        background-color:@color-black;
+        padding: 11px 0;
+    }
+    &__content{
+        height: 100%;
+        min-height: 100px;
+        padding:25px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap:wrap;
+        
+    }
+    &--icon{
+        height: 22px;
+        max-width: 100%;
+    }
+    &__contact{
+        display:flex;
+        justify-content: space-between;
+    }
+    &__info{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        
+        &+&{
+            margin-left: 30px;
+        }
+    }
+        
+}
+
+.top__panel__inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__text{
+    margin-left: 12px;
+    .font(@color-black,'Roboto',16px,400,normal,1.43);
+}
