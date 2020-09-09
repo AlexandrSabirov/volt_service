@@ -1,20 +1,21 @@
 //main: ../style.less
-.work{
+.works{
     display: flex;
+    -ms-display: flex;
     justify-content: center;
     flex-wrap:wrap;
 }
 
-.work__item{
+.works__item{
     width:33.333%;
     position:relative;
 }
-.work__img{
+.works__img{
     width: 100%;
     height: auto;
     display: block;
 }
-.work__content{
+.works__content{
     display: block;
     width: 100%;
     height: 100%;
@@ -29,11 +30,11 @@
          background-color:rgba(@color-primary,0.8);
          cursor: pointer;
     }
-    &:hover .work__title{
+    &:hover .works__title{
          display:block;
     }
 }
-.work__title{
+.works__title{
     display:none;
     .font(@color-white,'Roboto',30px,400,normal,1);
     position: absolute;

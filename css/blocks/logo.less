@@ -3,8 +3,14 @@
     margin-left:-7px;
     &__link{
     display: flex;
+    -ms-display: flex; 
     justify-content: center;
     align-items:center; 
+        
+        &__footer{
+        justify-content: flex-start;
+        }
+        
     }
     &__img{
         width:51px;
@@ -14,5 +20,14 @@
     &__text{
     margin-left:18px;
     .font(@color-black,'OpenSans',36px,900,normal,1);
+        &--white{
+            color:@color-white;
+        }
+    
     }
+    &__footer{
+        margin-left: 10px;
+        margin-bottom: 40px;
+    }
+    
 }
