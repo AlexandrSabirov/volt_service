@@ -9,6 +9,13 @@
 .works__item{
     width:33.333%;
     position:relative;
+    
+    @media @laptop{
+        width: 50%;
+    }
+    @media @mobile-l{
+        width: 100%;
+    }
 }
 .works__img{
     width: 100%;
@@ -33,6 +40,7 @@
     &:hover .works__title{
          display:block;
     }
+
 }
 .works__title{
     display:none;
@@ -42,4 +50,14 @@
     top:50%;
     z-index: 2;
     transform: translateY(-50%);
+    
+    @media @tablet{
+        font-size:25px;
+    }
+     @media @mobile-l{
+        font-size:30px;
+    }
+     @media @mobile-s{
+        font-size:20px;
+    }
 }

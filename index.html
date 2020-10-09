@@ -94,26 +94,33 @@
                     </div>
                 </div>
                 </div>
+               
                 <button class="btn btn--yellow" type="button">Обратный звонок</button>
+                
  
             </div>
-            
+            </div>
+            <div class="container">
             <nav class="nav" id="nav">
                    <a class="nav__link nav__link--active" href="#" >Главная</a>
                    <a class="nav__link" href="#">Услуги</a>
                    <a class="nav__link" href="#">Прайс-лист</a>
                    <a class="nav__link" href="#">Наши работы</a>
                    <a class="nav__link" href="#">Контакты</a>
+                   <button class="nav__toggle" type="button" id="nav__toggle"> 
+                   <span class="nav__toggle__item"></span>
+                   </button>
             </nav>
+                </div>
                 
-            </div> <!--/.container-->  
+             <!--/.container-->  
         </header><!--/.Header-->       
 
 
 <!--.Slider-->   
-<section class="section">
+<section class="section" id="slider">
    <div class="slider">
-    <div class="sl">
+    <div class="slider__inner">
         <div class="slider__item">            
                    <img class="slider__img" src="images/slider_1.jpg" alt="">
 
@@ -123,9 +130,10 @@
                         24/7 Экстренная служба <br>Тел:+7(906)-996-62-01
                     </h1>
                     <h3 class="slider__subtitle">Наш эксперт решит вашу проблему в кротчайший срок</h3>
-                    
-                    <button class="btn btn--yellow btn--call__an_ES" type="button">Вызвать экстренную службу</button>
-                    <a class="btn btn--transparent" href="#" >Подробнее о нас</a>
+                    <div class="slider__btn">
+                        <button class="btn btn--yellow btn--call__an_ES" type="button">Вызвать экстренную службу</button>
+                        <a class="btn btn--transparent" href="#" >Подробнее о нас</a>
+                    </div>
                     
                 </div>
             </div>
@@ -141,9 +149,10 @@
                         24/7 Экстренная служба <br>Тел:+7(906)-996-62-01
                     </h1>
                     <h3 class="slider__subtitle">Наш эксперт решит вашу проблему в кротчайший срок</h3>
-                    
-                    <button class="btn btn--yellow btn--call__an_ES" type="button">Вызвать экстренную службу</button>
-                    <a class="btn btn--transparent" href="#" >Подробнее о нас</a>
+                    <div class="slider__btn">
+                        <button class="btn btn--yellow btn--call__an_ES" type="button">Вызвать экстренную службу</button>
+                        <a class="btn btn--transparent" href="#" >Подробнее о нас</a>
+                    </div>
                     
                 </div>
             </div>
@@ -158,9 +167,10 @@
                         24/7 Экстренная служба <br>Тел:+7(906)-996-62-01
                     </h1>
                     <h3 class="slider__subtitle">Наш эксперт решит вашу проблему в кротчайший срок</h3>
-                    
-                     <button class="btn btn--yellow btn--call__an_ES" type="button">Вызвать экстренную службу</button>
-                    <a class="btn btn--transparent" href="#" >Подробнее о нас</a>
+                    <div class="slider__btn">
+                         <button class="btn btn--yellow btn--call__an_ES" type="button">Вызвать экстренную службу</button>
+                        <a class="btn btn--transparent" href="#" >Подробнее о нас</a>
+                    </div>
                     
                 </div>
             </div>
@@ -387,7 +397,7 @@
             <div class="marketing__content">
                 <div class="marketing__item">
                     <h3 class="marketing__suptitle">Наш эксперт решит вашу проблему в кротчайший срок</h3>           
-                    <h1 class="marketing__subtitle">Есть прорблемы с электрикой в квартире?</h1>
+                    <h1 class="marketing__subtitle">Есть проблемы с электрикой в квартире?</h1>
                 </div>
                 <div class="marketing__item">
                     <button class="btn btn--yellow" type="button">Вызвать мастера</button>
@@ -506,18 +516,21 @@
                     <div class="comments__name">
                         Отзывы на флампе
                     </div>
-                    <div class="comments">
+                    
                         <div class="comments__content">
-                           <img class="comments__img" src="svg/flamp.svg" alt="">
+                          <img class="comments__img" src="svg/flamp.svg" alt="">
                            <div class="comments__block">
-                                <div class="comments__author">Александр</div>
+                                
+                                
                                 <div class="comments__text">
-                                Вызывал специалиста из этой компании. Сказали примерную стоимость и
-                                 что самое удивительное - это стоимость не поменялась!!!</div>
+                                <p class="comments__author">Александр</p>
+                                <p>Вызывал специалиста из этой компании. Сказали примерную стоимость и
+                                 что самое удивительное - это стоимость не поменялась!!!</p></div>
                            </div>
+                           <button class="comments__btn btn btn--yellow" type="button">Читать дальше</button>
                         </div>
-                    </div>
-                    <button class="comments__btn btn btn--yellow" type="button">Читать дальше</button>
+                    
+                    
                     
                    
                </div>
@@ -525,19 +538,19 @@
                    <div class="comments__name">
                         Видео отзывы
                     </div>
-                    <div class="comments">
+                    
                         <div class="comments__content">
-                           <img class="comments__img" src="svg/feedback.svg" alt="">
+                          <img class="comments__img" src="svg/feedback.svg" alt="">
                            <div class="comments__block">
-                                
+                                 
                                 <div class="comments__text">
-                                Довольные клиенты не только пишут отзывы о нас в социальных сетях и на разных
-площадках, но и снимают видео.</div>
+                                <p>Довольные клиенты не только пишут отзывы о нас в социальных сетях и на разных площадках, но и снимают видео.</p></div>
                            </div>
-                        </div>
-                    </div>
-                    <button class="comments__btn btn btn--yellow" type="button">Смотреть отзывы</button>
+                           <button class="comments__btn btn btn--yellow" type="button">Смотреть отзывы</button>
                    
+                        </div>
+                    
+                    
                </div>
                
            </div>
@@ -563,10 +576,8 @@
                    <img class="contact__img" src="svg/phone_white.png" alt="">
                </div>
                <p class="contact__text">
-                  <span>Телефон:</span><br>
+                 <span>Телефон:</span>
                   +7-906-996-62-01
-
-
                </p>
            </div>
            <div class="footer__contact__item">
@@ -574,10 +585,8 @@
                    <img class="contact__img" src="svg/map_white.png" alt="">
                </div>
                <p class="contact__text">
-                <span> Адрес:</span><br>
-                г.Новосибирск, ул. Сибирская д. 42
-
-
+                <span> Адрес:</span>
+                г.Новосибирск,<br> ул. Сибирская д. 42
                </p>
            </div>
            <div class="footer__contact__item">
@@ -585,14 +594,12 @@
                    <img class="contact__img" src="svg/email_white.png" alt="">
                </div>
                <p class="contact__text">
-                <span>E-mail:</span><br>
+                   <span>E-mail:</span>
                  info@nso-elektrik.ru
-
-
                </p>
            </div>
        </div>
-   </div>W
+   </div>
    
    <div class="footer__content">
        <div class="footer__content__item">

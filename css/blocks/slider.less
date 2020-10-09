@@ -1,11 +1,15 @@
 //main: ../style.less
-.sl{
+.slider__inner{
+    @media @tablet{
+        top:0;
+    }
   
 }
 .slider__item{
     width: 100%;
     height: auto;
     max-height: 600px;
+    min-height: 280px;
     overflow: hidden;
     position: relative;
     background-color:#1f1f1f;
@@ -18,6 +22,9 @@
     width: 100%;
     min-width: 100vw;
     height: 100%;
+    @media @tablet{
+        width: 100vh;
+    }
   
 }
 .slider__content{
@@ -28,13 +35,46 @@
     z-index: 1;
     transform: translateX(-50%);
     text-align: center;
+    
+        @media @laptop_l{
+            top:105px;
+        }
+        @media @laptop_l{
+            top:80px;
+
+        }
+        @media @tablet{
+        top:30px;
+        }
+    
 }
 .slider__title{
     .font(@color-white,'Roboto',70px,700,normal,1.48);
     margin-bottom: 10px;
+    
+        @media @laptop_l{
+            font-size:55px;
+        }
+        @media @laptop{
+            font-size:30px;
+        }
+        @media @mobile-l{
+            font-size:25px;
+        }
 }
 .slider__subtitle{
     .font(@color-white,'Roboto',18px,700,normal,1);
     text-transform: uppercase;
     margin-bottom: 20px;
+    
+     @media @laptop{
+            font-size:15px;
+     }
+     @media @tablet{
+            font-size:12px;
+    }
+    @media @mobile-l{
+        display: none;
+    }
 }
+

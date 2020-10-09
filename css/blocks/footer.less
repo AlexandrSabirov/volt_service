@@ -24,19 +24,25 @@
     left:50%;
     transform: translateX(-50%);
     z-index: 2;
-   
-    
 }
+
 .footer__contact__wrapper{
     display: flex;
+    flex-wrap:wrap;
     -ms-display: flex;
     justify-content:flex-start;
     align-items: center;
     width: 100%;
     max-width: 1200px;
-    height:140px;
+    min-height:140px;
     background-color:@color-primary;
     border-radius:5px;
+    
+        @media @tablet{
+            flex-direction: column;
+        }
+    
+  
 }
 
 .round__icon{
@@ -49,16 +55,57 @@
     height: 80px;
     border-radius:50%;
     background-color:@color-yellow;
+    
+    @media @laptop{
+        margin-bottom: 10px;
+    }
 }
 .footer__contact__item{
     display: flex;
     -ms-display: flex;
     align-items: center;
-    flex-basis: 33.333%;
+    width: 33.333%;
     padding: 30px 0px 30px 20px ;
-    &+&{
-        border-left:1px solid @color-white;
+    position: relative;
+    
+    
+    &+&:before{
+        content: "";
+        display: block;
+        height: 100%;
+        width: 1px;
+        background-color:@color-white;
+        position: absolute;
+        top:0;
+        left:0;
+        z-index: 3;
+        
+       
     }
+        @media @laptop{
+            height: 194px;
+            flex-direction: column;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+    
+        @media @tablet{
+            width:100%;
+            
+                &+&:before{
+                content: "";
+                display: block;
+                height: 1px;
+                width: 100%;
+                background-color:@color-white;
+                position: absolute;
+                top:0;
+                left:0;
+                z-index: 3;
+                }
+        }
+    
+        
     
 }
 .contact__img{
@@ -72,6 +119,10 @@
     span{
         font-weight: 700;
     }
+    @media @laptop{
+        padding-left: 0;
+        text-align: center;
+    }
 }
 
 .footer__content{
@@ -81,14 +132,39 @@
     -ms-display: flex;
     justify-content:flex-start;
     
-    &__item{
-        
-        width: 33.3333%;
-
+    @media @laptop{
+        padding-top:170px;
     }
+    @media @tablet{
+        padding-top:562px;
+        padding-bottom: 45px;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+    
+    
 }
+.footer__content__item{
+    width: 33.3333%;
+    
+     @media @tablet{
+         text-align: center;
+         width: 100%;
+         
+         
+         &+&{
+             margin-top: 30px;
+         }
+    }
+
+}
+
 .footer__nav{
     padding-left:26px;
+    @media @tablet{
+         padding: 0;
+    }
    
 }
 .footer__nav__link{

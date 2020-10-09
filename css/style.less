@@ -17,6 +17,7 @@ body{
 .page{
     overflow: hidden;
 }
+
 p,h1,h2,h3,h4,h5,h6{
     padding:0;
     margin:0;
@@ -30,10 +31,12 @@ p,h1,h2,h3,h4,h5,h6{
 a{
     text-decoration: none;
 }
-a:focus{
+a:focus, 
+button:focus{
     outline:none;
 }
-a:-moz-focus-inner{
+a:-moz-focus-inner,
+button::-moz-focus-inner{
     border:0;
 }
 .container{

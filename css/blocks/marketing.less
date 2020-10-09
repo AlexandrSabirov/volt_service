@@ -25,14 +25,47 @@
     padding:45px 0 90px;
     text-transform: uppercase;
     
+        @media @laptop{
+            padding-bottom: 70px;
+        }
+        
+        @media @tablet{
+            flex-direction: column;
+             align-items: flex-start;
+        }
+        @media @mobile-m{
+            padding:35px 0 50px;
+        }
+    
 }
 
 .marketing__suptitle{
     .font(@color-white,'Roboto',18px,700,normal,1);
     margin-bottom: 20px;
+     @media @laptop{
+        font-size:15px;
+        margin-bottom: 15px;
+    }
+    @media @mobile-l{
+        font-size:12px;
+        line-height: 1.2;
+    }
 }
 .marketing__subtitle{
-    .font(@color-white,'Roboto',36px,700,normal,1);
+    .font(@color-white,'Roboto',36px,700,normal,1.2);
     padding-bottom: 5px;
-   
+    
+    @media @laptop_l{
+        font-size:30px;
+    }
+    @media @laptop{
+        font-size:22px;
+    }
+    @media @tablet{
+            padding-bottom: 20px;
+    }
+    @media @mobile-l{
+        font-size:18px;
+    }
+    
 }

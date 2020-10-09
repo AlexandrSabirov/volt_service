@@ -13,6 +13,9 @@
     z-index: 100;
     top:-100px;
     left:0;
+    @media @tablet{
+        top:50px;
+    }
 }
 .services__content{
     display: flex;
@@ -22,13 +25,20 @@
 }
 .services__item{
     width: 33%;
+    max-width: 420px;
+    min-width:320px;
+    min-height: 360px;
+    height: auto;
     flex-grow: 1;
     padding: 30px;
+    @media @laptop_l{
+        padding: 30px 20px;
+    }
 
 }
 .services__skew__img{
     width: 100%;
-    height: auto;
+    height: 100%;
     visibility: visible;
 }
 .services__skew{
@@ -39,6 +49,7 @@
     max-width: 360px;
     height: 100%;
     max-height: 360px;
+    margin: 0 auto;
     
 }
 .skew__content{
@@ -103,7 +114,7 @@
     &__text{
         .font(@color-brown,'OpenSans',14px,300,normal,1.28);
         transition:color .2s linear;
-        height: 100px;
+        height: 85px;
         overflow: hidden;
     }
 }
@@ -147,7 +158,20 @@
             flex-basis:33.33%;
             max-width: 400px;
         }
+        
+        @media @mobile-l{
+            font-size:25px;
+        }
+        @media @mobile-s{
+            font-size: 20px; 
+        }
     }
+    
+    @media @mobile-s{
+            padding:10px 0;
+            padding-left:45px;
+    }
+    
 }
 .price__list__item{
     display: flex;
@@ -193,6 +217,24 @@
                 top:50%;
                 transform: translateY(-50%);
                 z-index: 2;
+                
+            }
+           @media @mobile-l{
+                &:before{
+                    width: 24px;
+                    height: 24px;
+                    
+                }
+            }
+            @media @mobile-m{
+                &:before{
+                    width: 20px;
+                    height: 20px;
+                    left: 13px;
+                }
+                &:first-child{
+                    padding-left: 45px;
+                }
             }
         }
         &:last-child{
@@ -200,7 +242,18 @@
             max-width: 400px;
             border-left: 1px solid @color-primary;
         }
-        
+        @media @tablet{
+            padding: 20px 25px;
+        }
+        @media @mobile-l{
+            padding: 13px 10px;
+            font-size:15px;
+        }
+        @media @mobile-s{
+            
+            font-size:12px;
+        }
+      
         
     }
     

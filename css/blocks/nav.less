@@ -10,7 +10,20 @@
     border-radius: @btn-radius;
     padding: 7px 14px;
     position: relative;
-    z-index: 100;
+    z-index: 200;
+    
+    @media @tablet{
+        border-radius: 0;
+        flex-direction: column;
+            
+    }
+    &.fixed{
+        position: fixed;
+        top:0;
+        left:0;
+    }
+    
+        
     
 }
 .nav__link{
@@ -29,4 +42,100 @@
         background-color:@color-yellow;
 
     }
+    @media @tablet{
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity .2s linear;
+       
+   
+        &.active{
+            visibility: visible;
+            opacity: 1;
+            background-color:#fff;
+            border-radius:0;
+            color:@color-black;
+            width: 100%;
+            position: relative;
+            top:53px;
+            padding: 20px 20px 20px 30px;
+            border-left:2px solid darken(#fff,10%);
+            border-right:2px solid darken(#fff,10%);
+            &:hover{
+                background-color: darken(#fff,10%);
+                transition:background .3s linear;
+            }
+            &:last-of-type{
+                border-bottom: 2px solid darken(#fff,10%);
+            }
+        }
+        &--active{
+            background-color: darken(#fff,10%);
+
+        }
+    }
+}
+
+
+.nav__toggle{
+    display: none;
+    padding: 10px 0;
+    font-size: 0;
+    color:transparent;
+    border:0;
+    background: none;
+    cursor: pointer;
+    width:30px;
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    right: 14px;
+    z-index: 2;
+    @media @tablet{
+        display: block;
+        &.active .nav__toggle__item{
+            background-color: transparent;
+            transition:background .2s linear;
+        }
+        &.active .nav__toggle__item:before,
+        &.active .nav__toggle__item::after{
+            top:0;
+            transition: top .2s linear .2s,transform .2s linear .4s;
+        }
+        &.active .nav__toggle__item:before{
+            transform: rotate(-45deg);
+        }
+        &.active .nav__toggle__item:after{
+            transform: rotate(45deg);
+        }
+        
+    }
+}
+
+.nav__toggle__item{
+    width: 30px;
+    height: 3px;
+    background-color: @color-white;
+    display: block;
+    position: relative;
+    transition:background .2s linear .4s;
+    &:before, &:after{
+        display: block;
+        content: "";
+        width: 30px;
+        height: 3px;
+        position: absolute;
+        background-color: @color-white;
+        z-index: 2;
+        left: 0;
+        transition: top .2s linear .2s, transform .2s linear ;
+    }
+    
+    &:before{
+        top:-8px;
+    }
+    
+    &:after{
+        top:8px;
+    }
+    
 }

@@ -6,17 +6,46 @@
         background-color:#f6f6f6;
         padding: 90px 0 110px;
         margin-top:-35px;
+        @media @tablet{
+            padding-bottom: 80px;
+            margin-top: 60px;
+        }
+        @media @mobile-l{
+            padding-top: 60px;
+            padding-bottom: 70px;
+        }
+          @media @mobile-s{
+            padding-top: 40px;
+            padding-bottom: 0px;
+        }
+        
     }
     &--marketing{
         padding-top:286px;
     }
     &--about{
         padding: 75px 0;
+        @media @mobile-l{
+            padding: 55px 0;
+        }
+        @media @mobile-s{
+            padding: 45px 0;
+        }
+        
+        
     }
     &--works{
         padding-top:90px;
         background-color:#f6f6f6;
         margin-bottom: 95px;
+        @media @mobile-l{
+            padding-top:70px;
+            margin-bottom: 75px;
+        }
+        @media @mobile-m{
+            padding-top:50px;
+            margin-bottom: 75px;
+        }
     }
     &--comments{
         padding-bottom: 102px;
@@ -29,5 +58,18 @@
         padding-bottom: 80px;
         text-transform:uppercase;
         text-align: center;
+        @media @laptop{
+            font-size: 32px;
+           
+        }
+        @media @mobile-l{
+            padding-bottom: 60px;
+        }
+        @media @mobile-m{
+            font-size: 25px;
+        }
+        @media @mobile-s{
+            font-size: 20px;
+        }
     }
 }

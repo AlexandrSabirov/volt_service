@@ -1,15 +1,22 @@
 //main: ../style.less
 
 .btn{
+    
     .font(@color-white,'Roboto',@btn-font,700,normal,1);
     border:none;
     border-radius:@btn-radius;
     text-transform:uppercase;
     cursor: pointer;
     outline: none;
+    min-width: 240px;
+
         transition:background .2s linear, color .2s linear;
     &+&{
         margin-left: 14px;
+        
+        @media @mobile-l{
+            margin-left: 0;
+        }
     }
     &--yellow{
         padding: 18px 40px;
@@ -17,6 +24,7 @@
         &:hover{
            background-color:darken(@color-yellow,5%); 
         }
+        
     }
     &--white{
         padding: 22px 40px;
@@ -25,10 +33,19 @@
          &:hover{
            color:@color-primary;
         }
+        @media @laptop{
+            margin-left:0;
+        }
         
     }
     &--call__an_ES{
         padding: 18px 31px;
+        @media @mobile-l{
+            padding: 14px 23px;
+        }
+        @media @mobile-s{
+        padding: 14px 15px;
+        }
     }
     &--transparent{
         padding: 13.5px 23px;
@@ -39,5 +56,13 @@
             background-color:@color-white;
             color:@color-black
         }
+         @media @mobile-l{
+            margin-top: 5px;
+            padding: 9.5px 20px;
+        }
     }
+    @media @mobile-l{
+        display: inline-block;
+    }
+    
 }
