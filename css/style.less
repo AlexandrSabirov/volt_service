@@ -13,6 +13,9 @@ body{
     font-family: 'Roboto';
     font-style: normal;
     line-height: 1;
+    &.no-scroll{
+        overflow: hidden;
+    }
 }
 .page{
     overflow: hidden;
@@ -31,9 +34,11 @@ p,h1,h2,h3,h4,h5,h6{
 a{
     text-decoration: none;
 }
-a:focus, 
+a:focus,
+a:active,
+button:active, 
 button:focus{
-    outline:none;
+    outline:none !important;
 }
 a:-moz-focus-inner,
 button::-moz-focus-inner{
@@ -61,3 +66,4 @@ button::-moz-focus-inner{
 @import "blocks/comments";
 @import "blocks/footer";
 @import "blocks/copyright";
+@import "blocks/modal";

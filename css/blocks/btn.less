@@ -1,7 +1,7 @@
 //main: ../style.less
 
 .btn{
-    
+    display: inline-block;
     .font(@color-white,'Roboto',@btn-font,700,normal,1);
     border:none;
     border-radius:@btn-radius;
@@ -9,15 +9,10 @@
     cursor: pointer;
     outline: none;
     min-width: 240px;
-
+    max-width: 310px;
+    margin-bottom: 10px;
         transition:background .2s linear, color .2s linear;
-    &+&{
-        margin-left: 14px;
-        
-        @media @mobile-l{
-            margin-left: 0;
-        }
-    }
+ 
     &--yellow{
         padding: 18px 40px;
         background-color:@color-yellow;
@@ -40,15 +35,21 @@
     }
     &--call__an_ES{
         padding: 18px 31px;
+        margin-left: 7px;
+        margin-right: 7px;
         @media @mobile-l{
             padding: 14px 23px;
+            margin-left: 0;
+            margin-right: 0;
         }
         @media @mobile-s{
         padding: 14px 15px;
         }
     }
     &--transparent{
-        padding: 13.5px 23px;
+        padding: 15px 23px;
+        margin-left: 7px;
+        margin-right: 7px;
         background-color:transparent;
         border:3px solid @color-white;
     
@@ -59,10 +60,38 @@
          @media @mobile-l{
             margin-top: 5px;
             padding: 9.5px 20px;
+            margin-left: 0;
+            margin-right: 0;
         }
     }
-    @media @mobile-l{
-        display: inline-block;
+    &--modal{
+        background-color:@color-primary;
+        padding: 18px 40px;
+        width:100%;
+        min-width: 200px;
     }
     
+    
+}
+.toTop{
+    display: none;
+    background-color:@color-primary;
+    width:60px;
+    height: 60px;
+    text-align: center;
+    padding: 14px 0;
+    border-radius: 50%;
+    cursor: pointer;
+    position: fixed;
+    right: 20px;
+    bottom:40px;
+    z-index: 100;
+    transition: background .2s linear;
+    box-shadow: 0px 0px 10px rgba(0,0,0,.4);
+    &:hover{
+        background-color: darken(@color-primary,10%);
+    }
+    &.show{
+        display: block;
+    }
 }
