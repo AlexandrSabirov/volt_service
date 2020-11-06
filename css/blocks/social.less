@@ -11,10 +11,21 @@
 .social__link{
     font-size: 20px;
     color:@color-white;
+    transition: color .2s linear, text-shadow .2s linear;
+    &:hover{
+        text-shadow: 0px 0px 4px @color-white;
+    }
+    
     & + .social__link{
         margin-left: 10px;
     }
     &--footer{
         font-size: 40px;
+        text-shadow: 0px 0px 4px transparent;
+    }
+    &--footer:hover{
+        
+        color:@color-primary;
+        text-shadow: 0px 0px 4px @color-primary;
     }
 }

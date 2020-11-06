@@ -1,0 +1,186 @@
+//main: ../style.less
+.modal{
+    background-color: fade(@color-black,80%);
+    position: fixed;
+    top:0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+    z-index: 1000;
+    display: none;
+    &.show{
+        display: block;
+    }
+}
+.modal__dialog{
+    visibility: hidden;
+    opacity: 0;
+    position: relative;
+    top:50%;
+    left:50%;
+    z-index: 1;
+    transform:translate3d(-50%,-50%,0);
+    background-color: @color-white;
+    padding: 30px 30px 40px;
+    transition:visibility .2s linear .4s, opacity .2s linear ;
+    &.show{
+        visibility: visible;
+        opacity: 1;
+        transition:visibility .2s linear, opacity .2s linear .1s;
+    }
+    &--sm{
+        max-width:360px;
+    }
+    &--big{
+        max-width:760px;
+        @media @mobile-l{
+          padding: 20px 30px 20px;  
+        }
+    }
+}
+.modal__popup{
+    padding-top:40px;
+    p{
+        text-align: center;
+        .font(@color-black,'Roboto',16px,300,normal,1);
+        margin-bottom: 20px;
+        
+        @media @mobile-s{
+            font-size: 14px;
+        }
+     
+    }
+}
+.modal__title{
+    .font(@color-black,'OpenSans',30px,700,normal,1);
+    margin-bottom: 30px;
+    text-align: center;
+    @media @mobile-s {
+        font-size: 24px;
+    }
+    @media @mobile-l{
+            margin-bottom: 20px;
+    }
+}
+.modal__popup .field{
+    margin-bottom: 20px;
+    @media @mobile-l{
+            margin-bottom: 15px;
+    }
+}
+.modal__form{
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    textarea{
+        background-position: 11px center;
+        background-repeat: no-repeat;
+        background-size: 25px;
+        .font(@color-black,'Roboto',15px,400,normal,1);
+        display: block;
+        width:100%;
+        height: 50px;
+        padding: 10px 20px 10px 45px;
+        outline: 1px solid @color-primary;
+        border: none;
+        transition:outline .2s linear;
+            &:focus{
+            outline: 1px solid @color-yellow; 
+            }
+    }
+    input[type="text"]{
+        background-image: url('../svg/user.png');    
+    }
+    input[type="email"]{
+        background-image: url('../svg/email.png');
+    }
+    input[type="tel"]{
+        background-image: url('../svg/phone-call.png');    
+    }
+    input[type="submit"]:disabled{
+        background-color: lighten(@color-primary,10%);
+    }
+    textarea{
+        resize:none;
+        min-height: 20vh;
+        padding-left: 15px;
+    }
+    
+}
+    
+
+.modal__close{
+        padding: 0;
+        background: none;
+        border:0;
+        position: absolute;
+        top:15px;
+        right: 15px;
+        z-index: 1;
+        cursor: pointer;
+        img{ transition:transform .1s linear};
+        
+     
+        &:hover img{
+            
+            transform:rotate(90deg);
+        }
+}
+.modal__accept{
+    cursor:pointer;
+    position: relative;
+    display: block;
+    span{
+        display: block;
+        padding-left: 40px;
+        .font(@color-black,'OpenSans',15px,400,normal,1);
+        a{
+            color:@color-primary;
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+  
+    &::before{
+        content: "";
+        display: block;
+        width: 20px;
+        height: 20px;
+        background-color: @color-white;
+        border: 1px solid @color-primary;
+        border-radius: 4px;
+        position: absolute;
+        top:0;
+        left:0;
+        z-index: 1;
+    }
+    &::after{
+        content: "";
+        visibility: hidden;
+        background-image: url('../svg/check.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 16px;
+        height:16px;
+        position: absolute;
+        top:2px;
+        left: 2px;
+        z-index: 2;
+        opacity: 0;
+        transition: opacity .3s linear;
+        
+    }
+   
+}
+#accept,#accept__app{
+    display: none;
+    position: absolute;
+}
+#accept:checked ~ .modal__accept::after,
+#accept__app:checked ~ .modal__accept::after{
+    visibility:visible;
+    opacity:1;
+}
