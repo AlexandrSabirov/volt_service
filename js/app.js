@@ -61,7 +61,7 @@ let sliderH = $('#slider').innerHeight()*1.5,
     
 });*/
     
-    $("input[name=your-phone]").mask("+7(999)999-99-99");
+    /*$("input[name=your-phone]").mask("+7(999)999-99-99");*/
     
 /*Footer_line
  
