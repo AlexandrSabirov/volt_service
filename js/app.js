@@ -96,8 +96,6 @@ let modal_dialog = '.modal__dialog';
         event.preventDefault();
         let data__name = $(this).data('modal');
         let modal__add = data__name + ' ' + modal_dialog;
-        console.log(modal__add);
-        
         $(data__name).addClass('show');
         setTimeout(function(){
              $(modal__add).addClass('show');
