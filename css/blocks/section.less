@@ -3,7 +3,7 @@
 .section{
     position:relative;
     &--popular__service{
-        background-color:#f6f6f6;
+        background-color:@color-background;
         padding: 90px 0 110px;
         margin-top:-35px;
         @media @tablet{
@@ -19,6 +19,9 @@
             padding-bottom: 0px;
         }
         
+    }
+    &--price{
+        padding: 0 0 80px;
     }
     &--marketing{
         padding-top:286px;
@@ -36,7 +39,7 @@
     }
     &--works{
         padding-top:90px;
-        background-color:#f6f6f6;
+        background-color:@color-background;
         margin-bottom: 95px;
         @media @mobile-l{
             padding-top:70px;

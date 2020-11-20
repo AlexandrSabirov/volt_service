@@ -1,0 +1,88 @@
+//main: ../style.less
+.accordion__item{
+    margin-bottom: 10px;    
+
+    &.active .accordion__header:before{
+        display: none;
+    }
+    .price__list__services{
+        display: none;
+        &.active{
+           display: block
+        }
+    }
+
+}
+
+ 
+.accordion__header{
+    padding: 20px 80px 20px 50px;
+    background-color: @color-accordion;
+    .font(@color-white,'Roboto',30px,700,normal,1.2);
+    position: relative;
+    cursor: pointer;
+    width:100%;
+    transition:color .2s linear;
+    &:before,&:after{
+        transition: background .3s linear;
+    }
+    &:before{
+        display: block;
+        content: "";
+        position: absolute;
+        top:50%;
+        transform: translateY(-50%);
+        right: 42px;
+        height: 30px;
+        width: 4px;
+        background:@color-white;
+        
+         @media @mobile-l{
+             right: 21px;
+             height: 25px;
+             width: 3px;
+        }
+    }
+    &:after{
+        content: "";
+        display: block;
+        position: absolute;
+        top:50%;
+        transform: translateY(-50%);
+        right: 29.5px;
+        height: 4px;
+        width: 30px;
+        background-color: @color-white;
+        @media @mobile-l{
+             right: 10px;
+             height: 3px;
+             width: 25px;
+        }
+    }
+    &:hover:before,&:hover:after{
+         background-color:@color-primary;
+         transition: background .3s linear;
+    }
+    &:hover{
+        background-color: @color-accordion;
+        color: @color-primary;
+        
+    }
+   
+    @media @tablet{
+        font-size:26px;
+        padding:20px 80px 20px 40px;
+    }
+    @media @mobile-l{
+        font-size:22px;
+        padding:15px 80px 15px 40px;
+    }
+    @media @mobile-m{
+        font-size:18px;
+        padding:15px 70px 15px 20px;
+    }
+    @media @mobile-s{
+        font-size:16px;
+        padding:15px 70px 15px 15px;
+    }
+}

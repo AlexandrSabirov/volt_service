@@ -9,6 +9,7 @@
 .works__item{
     width:33.333%;
     position:relative;
+   
     
     @media @laptop{
         width: 50%;
@@ -31,26 +32,28 @@
     top:0;
     left:0;
     z-index: 1;
-    transition:background .2s linear;
+    transition: background .2s linear;
     text-align: center;
-    &:hover{
-         background-color:rgba(@color-primary,0.8);
+  
+    &:hover {
+
+         background-color:rgba(@color-primary,0.7);
          cursor: pointer;
     }
+    
     &:hover .works__title{
          display:block;
     }
 
 }
 .works__title{
-    display:none;
+    display: none;
     .font(@color-white,'Roboto',30px,400,normal,1);
     position: absolute;
     width:100%;
     top:50%;
     z-index: 2;
     transform: translateY(-50%);
-    
     @media @tablet{
         font-size:25px;
     }

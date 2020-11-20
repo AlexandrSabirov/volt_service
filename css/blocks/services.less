@@ -30,6 +30,7 @@
     flex-wrap: wrap;
 }
 .services__item{
+    perspective: 480px;
     width: 33%;
     max-width: 420px;
     min-width:320px;
@@ -37,42 +38,54 @@
     height: auto;
     flex-grow: 1;
     padding: 30px;
-    @media @laptop_l{
-        padding: 30px 20px;
-    }
-
+   
 }
-.services__skew__img{
+.skew__img{
     width: 100%;
     height: 100%;
     visibility: visible;
+    display:block;
+    opacity: 0;
+    transition:opacity.2s linear;
+}
+.services__skew__img{
+    
+    width: 100%;
+    height: 100%;
+    position:relative;
+    border:1px solid #e3e2e7;
+    &:after{
+        position: absolute;
+        left: 0;
+        top:0;
+        bottom: 0;
+        right: 0;
+        z-index: -1;
+        content: "";
+        display: block;
+        background-color:@color-white;
+        transition:background .2s linear;
+    }
+    
+  
 }
 .services__skew{
+    perspective: 420px;
     display: block;
-    transform: skewY(0deg) skewX(0deg);
     position: relative;
     width: 100%;
-    max-width: 360px;
+    max-width: 420px;
     height: 100%;
     max-height: 360px;
     margin: 0 auto;
-    
-}
-.skew__content{
-    position: absolute;
-    padding: 36px 20px 20px;
-    z-index: 5;
-    left: 0;
-    top:0;
-    bottom:0;
-    right:0;
-    background-color:@color-white;
-    border:1px solid #e3e2e7;
-    text-align: center;
-    transition:background .2s linear;
-    &:hover{
-        background-color:rgba(@color-primary,0.8);
+
+    &:hover .services__skew__img:after{
+        background-color:@color-primary;
         border-color:@color-primary;
+        
+    }
+    &:hover .services__skew__img .skew__img{
+        opacity: 0.3;
     }
     &:hover .skew__icon{
         background-color:@color-white;
@@ -85,6 +98,20 @@
     }
     &:hover .skew__text{
         color:@color-white;
+    } 
+    
+}
+.skew__content{
+    position: absolute;
+    z-index: 5;
+    padding: 36px 20px 20px;
+    left: 0;
+    top:0;
+    bottom: 0;
+    right: 0;
+    text-align: center;
+    &:hover{
+       transition:transfrom 3s cubic-bezier(0.53, 0.645, 0.51,1.34);
     }
 }
 
@@ -124,6 +151,7 @@
         overflow: hidden;
     }
 }
+
 /*Popular Service*/
 
 .popular__services{
@@ -133,9 +161,8 @@
 .price__list__services{
     background-color:@color-white;
     border:1px solid @color-primary;
-    border-top-left-radius: 3px;
-    border-top-right-radius: 3px;
-    
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px; 
 }
 .price__header, 
 .price__list__item{
@@ -152,24 +179,42 @@
     padding:15px 0;
     padding-left:45px;
     h2{
-         .font(@color-white,'Roboto',30px,700,normal,1);
+         .font(@color-white,'Roboto',28px,700,normal,1);
         text-align: left;
     
         &:first-child{
-            flex-basis:66.66%;
+            flex-basis:65.66%;
             max-width: 800px;
         }
-        &:last-child{
-
-            flex-basis:33.33%;
+        &+h2{
+            padding-left: 20px;
+            flex-basis:34.33%;
             max-width: 400px;
         }
         
-        @media @mobile-l{
+        @media @tablet{
             font-size:25px;
+            &+h2{
+                padding-left: 10px;
+            }
+            
+        }
+        @media @mobile-l{
+            font-size:20px;
+            &+h2{
+                padding-left: 10px;
+            }
+            
+        }
+        @media @mobile-l{
+            font-size:18px;
+            
         }
         @media @mobile-s{
-            font-size: 20px; 
+            &+h2{
+                padding-left: 0;
+            }
+            font-size: 15px; 
         }
     }
     
@@ -204,11 +249,11 @@
     span{
      
         text-align: left;
-        padding: 26px 45px;
+        padding: 26px 35px;
     
         &:first-child{
             padding-left: 75px;
-            flex-basis:66.66%;
+            flex-basis:67.66%;
             max-width: 800px;
             position: relative;
             &:before{
@@ -243,11 +288,12 @@
                 }
             }
         }
-        &:last-child{
-            flex-basis:33.33%;
+        &+span{
+            flex-basis:34.33%;
             max-width: 400px;
             border-left: 1px solid @color-primary;
         }
+        
         @media @tablet{
             padding: 20px 25px;
         }

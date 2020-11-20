@@ -1,0 +1,29 @@
+//main: ../style.less
+.breadcrumbs{
+    padding: 40px 0px; 
+    margin-bottom: 40px;
+    width: 100%;
+    background-color:@color-background;
+    background-image: url('../images/texture.png');
+    background-repeat: repeat;
+}
+
+.breadcrumbs__content{
+    a{
+        .font(@color-black,'Roboto',16px,400,normal,1.43);
+
+         &:hover{
+            text-decoration: underline;
+        }
+    }
+    span {
+        .font(@color-black,'Roboto',16px,400,normal,1.43);
+        text-decoration: underline;
+       
+    }
+    
+}
+.breadcrumbs__sep{
+    text-decoration:none !important;
+    margin: 0 2px;
+}

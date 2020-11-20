@@ -40,6 +40,7 @@
         }
     }
 }
+
 .modal__popup{
     padding-top:40px;
     p{
@@ -53,6 +54,7 @@
      
     }
 }
+
 .modal__title{
     .font(@color-black,'OpenSans',30px,700,normal,1);
     margin-bottom: 30px;
@@ -64,13 +66,19 @@
             margin-bottom: 20px;
     }
 }
-.modal__popup .field{
+.modal__popup .field, .contact__form{
     margin-bottom: 20px;
     @media @mobile-l{
             margin-bottom: 15px;
     }
 }
-.modal__form{
+.field{   
+    &:extend(.contact__form);
+   
+}
+
+.modal__form {
+    width: 100%;
     input[type="text"],
     input[type="email"],
     input[type="tel"],
@@ -109,7 +117,6 @@
     }
     
 }
-    
 
 .modal__close{
         padding: 0;
@@ -175,12 +182,13 @@
     }
    
 }
-#accept,#accept__app{
+#accept,#accept__app,#contact__accept{
     display: none;
     position: absolute;
 }
 #accept:checked ~ .modal__accept::after,
-#accept__app:checked ~ .modal__accept::after{
+#accept__app:checked ~ .modal__accept::after,
+#contact__accept:checked ~ .modal__accept::after{
     visibility:visible;
     opacity:1;
 }
